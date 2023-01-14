@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { ArticleList } from "./components/ArticleList/ArticleList";
 import { WelcomeBar } from "./components/WelcomeBar/WelcomeBar";
 import { NotionAPI } from "./components/api/NotionAPI";
+import { LoadSkeleton } from "./components/LoadSkeleton/LoadSkeleton";
+import { Credit } from "./components/Credit/Credit";
 
 export function App() {
   const [articles, setArticles] = useState([]);
@@ -21,7 +23,8 @@ export function App() {
   return (
     <div className="container mx-auto h-screen p-10 ">
       <WelcomeBar text="Retrouvez un ensemble d'articles sur le theme de :" />
-      {articles && <ArticleList articleList={articles}/>}
+      {articles && <ArticleList articleList={articles} />}
+      <Credit />
     </div>
   );
 }

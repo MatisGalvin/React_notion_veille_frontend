@@ -1,15 +1,12 @@
-export function ArticleListItem({ name, content }) {
+export function ArticleListItem({ name, url }) {
   return (
-    <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-lg m-5 relative h-80">
-      <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+    <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow m-5 relative h-80">
+      <h2 className="mb-2 text-lg font-bold tracking-tight text-gray-900 max-h-48 overflow-hidden">
         {name}
       </h2>
 
-      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-        {content}
-      </p>
       <a
-        href="http://www.google.com"
+        href={url}
         target="_blank"
         className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 absolute bottom-5 left-5"
       >
