@@ -21,7 +21,7 @@ export function App() {
   return (
     <div className="container mx-auto h-screen p-10 ">
       <WelcomeBar text="Retrouvez un ensemble d'articles sur le theme de :" />
-      <ArticleList />
+      {articles && <ArticleList articleList={articles}/>}
     </div>
   );
 }
