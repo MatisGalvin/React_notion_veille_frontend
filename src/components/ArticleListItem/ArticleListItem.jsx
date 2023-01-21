@@ -1,9 +1,14 @@
-export function ArticleListItem({ name, url }) {
+import { ArticleTagList } from "../ArticleTagList/ArticleTagList";
+
+export function ArticleListItem({ name, url, themes }) {
   return (
     <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-shadow m-5 relative h-80">
-      <h2 className="mb-2 text-lg font-bold tracking-tight text-gray-900 max-h-48 overflow-hidden">
+      <h2 className="mb-2 text-lg font-bold tracking-tight text-gray-900 max-h-20 overflow-hidden">
         {name}
       </h2>
+      <div className="max-h-32 overflow-scroll md:max-h-44 lg:max-h-32 ">
+        <ArticleTagList themes={themes} />
+      </div>
 
       <a
         href={url}

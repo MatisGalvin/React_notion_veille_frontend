@@ -8,9 +8,9 @@ export function ArticleList({ articleList }) {
         {articleList.map((article) => {
           return (
             <ArticleListItem
-              name={article.properties.Nom.title[0].plain_text}
-              // content={article.properties.Description.rich_text[0].plain_text}
-              url={article.url}
+              name={article.properties.nom.title[0].plain_text}
+              url={article.properties.url.url}
+              themes={article.properties.theme.multi_select}
               key={article.id}
             />
           );
