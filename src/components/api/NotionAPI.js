@@ -12,7 +12,7 @@ export class NotionAPI {
     };
     const { data } = await axios.post(
       "https://api.notion.com/v1/databases/9d4ab685f1db4798b6db0efa3cc3257b/query",
-      {},
+
       settings
     );
     console.log(data);
